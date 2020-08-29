@@ -23,3 +23,7 @@ def password(request):
 
     the_password = ''.join([random.choice(characters) for _ in range(length)])
     return render(request, 'generator/password.html', {'password': the_password})
+
+
+def about(request):
+    return render(request, 'generator/about.html')

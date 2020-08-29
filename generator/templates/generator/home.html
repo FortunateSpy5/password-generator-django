@@ -2,30 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Password Generator</title>
 </head>
-<body>
-    <h1>Password Generator</h1>
-    <form action="{% url 'password' %}">
-        <select name="length">
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12" selected="selected">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-        </select>
+<body class="bg-white">
+    <h1 class="bg-dark text-white w-100 p-3 text-center">Password Generator</h1>
+    <div class="container text-center h4">
         <br>
-        <label><input type="checkbox" name="uppercase">Upper Case</label>
+        <form action="{% url 'password' %}">
+            <label>
+                Length 
+                <select name="length">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected="selected">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                </select>
+            </label>
+            <br>
+            <label>Upper Case <input type="checkbox" name="uppercase"></label>
+            <br>
+            <label>Numbers <input type="checkbox" name="numbers"></label>
+            <br>
+            <label>Special Characters <input type="checkbox" name="special"></label>
+            <br>
+            <br>
+            <input type="submit" value="Generate Password" class="btn btn-secondary">
+        </form>
         <br>
-        <label><input type="checkbox" name="numbers">Numbers</label>
-        <br>
-        <label><input type="checkbox" name="special">Special Characters</label>
-        <br>
-        <input type="submit" value="Generate Password">
-    </form>
+    </div>
+
+    <div id="foot" class="bg-dark h3 w-100 p-3 text-right fixed-bottom"><a href="{% url 'about' %}">About</a></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>

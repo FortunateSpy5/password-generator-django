@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Password</title>
+    <title>About</title>
 </head>
-<body class="bg-dark">
-    <div class="container text-center text-light">
-    	<h1>Your Password</h1>
-    	<h3 class="alert alert-dark">{{ password }}</h3>
+<body>
+    <div class="text-center">
+    	<h1 class="bg-dark text-light p-3">About</h1>
+    	<p class="p-5">
+        	This website was created by <a href="https://github.com/FortunateSpy5" target="_blank">FortunateSpy5</a> on 29th August 2020 as a part of <a href="https://www.udemy.com/course/django-3-make-websites-with-python-tutorial-beginner-learn-bootstrap/" target="_blank">Django 3 - Full Stack Websites with Python Web Development</a>
+    	</p>
     	<a href="{% url 'home' %}" class="btn btn-secondary">Go Home</a>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
